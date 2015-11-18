@@ -1,0 +1,65 @@
+<form action="<%= cats_url %>" method="post">
+<center>
+<table>
+    <tr>
+      <td>
+        Name:
+      </td>
+      <td>
+        <input type="text" name="cat[name]">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Sex:
+      </td>
+      <td>
+        <label for="F">Female:</label>
+        <input type="radio" name="cat[sex]" id="F" value="F">
+        <label for="M">Male:</label>
+        <input type="radio" name="cat[sex]" id="M" value="M">
+      </td>
+   </tr>
+    <tr>
+      <td>
+        Color:
+      </td>
+      <td>
+        <% color_options = ["------"] + Cat::CAT_COLORS %>
+        <select name="cat[color]" id="color">
+          <% color_options.each do |color_option| %>
+          <option value="<%= color_option %>"><%= color_option.capitalize %></option>
+          <% end %>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Birth date:
+      </td>
+      <td>
+        <input type="date" name="cat[birth_date]" >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Description of Cat:
+      </td>
+      <td>
+        <textarea name="cat[description]" cols=25 rows=4>
+        Tell us about your cat!
+        </textarea>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="submit" value="Add Cat">
+        <!-- <%= button_to "Add Cat", "/cats", method: :post %>  -->
+      </td>
+    </tr>
+</table>
+
+
+
+</form>
+</center>

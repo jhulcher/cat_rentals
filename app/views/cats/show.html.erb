@@ -1,0 +1,37 @@
+<marquee direction = "up" behavior = "slide">
+<center>
+
+  <table>
+  <tr>
+    <td>
+      Name: <%= @cat.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Color: <%= @cat.color %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Sex: <%= @cat.sex %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Description: <%= @cat.description %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Birthday: <%= @cat.birth_date %>
+    </td>
+  </tr>
+</table>
+
+</center>
+
+</marquee>
+
+<%= link_to "Edit Cat", edit_cat_url %>
+<%= button_to "Destroy Cat", cat_url, method: :delete %> 

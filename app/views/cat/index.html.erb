@@ -1,0 +1,43 @@
+<html>
+<body>
+<TABLE>
+  <TR>
+    <TD>
+      Birth Date
+    </TD>
+    <TD>
+      Color
+    </TD>
+    <TD>
+      Name
+    <td>
+      Sex
+    </td>
+    <td>
+      Description
+    </td>
+  </tr>
+
+  <% @cats.each do |cat| %>
+  <tr>
+    <td>
+      <%= cat.birth_date %>
+    </td>
+    <td>
+      <%= cat.color %>
+    </td>
+    <td>
+      <%= cat.name %>
+    </td>
+    <td>
+      <%= cat.sex %>
+    </td>
+    <td>
+      <%= cat.description %>
+    </td>
+  </tr>
+  <% end %>
+
+</TABLE>
+</body>
+</html>

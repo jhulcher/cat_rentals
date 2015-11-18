@@ -1,0 +1,42 @@
+<center>
+<TABLE>
+  <TR>
+    <TD>
+      <i><u><b>Name</b></u></i>
+    </TD>
+    <TD>
+      <b><u><i>Color</b></u></i>
+    </TD>
+    <TD>
+      <b><u><i>Sex</b></u></i>
+    <td>
+      <b><u><i>Description</b></u></i>
+    </td>
+    <td>
+      <b><u><i>Birthdate</b></u></i>
+    </td>
+  </tr>
+  <% @cats.each do |cat| %>
+  <tr>
+    <td>
+      <%= link_to "#{cat.name}", cat_url(cat.id) %>
+    </td>
+    <td>
+      <%= cat.color %>
+    </td>
+    <td>
+      <%= cat.sex %>
+    </td>
+    <td>
+      <%= cat.description %>
+    </td>
+    <td>
+      <%= cat.birth_date %>
+    </td>
+  </tr>
+  <% end %>
+</TABLE>
+<br>
+<br>
+<%= link_to "New Cat", new_cat_url %>
+</center>
